@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Bisma ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia,serif;
+    background:linear-gradient(135deg,#ffd1e8,#d8c1ff,#ffe6bd);
+    color:#743b70;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.page{
+    min-height:100vh;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:25px 15px;
+    text-align:center;
+}
+
+.page.active{
+    display:flex;
+    animation:show .8s ease;
+}
+
+@keyframes show{
+    from{opacity:0;transform:translateY(25px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+.card{
+    width:100%;
+    max-width:650px;
+    padding:35px 22px;
+    background:rgba(255,255,255,.83);
+    border:2px solid white;
+    border-radius:30px;
+    box-shadow:0 10px 40px #9a4d9360;
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    color:#d33b91;
+    font-size:clamp(35px,8vw,55px);
+    margin:18px 0;
+}
+
+h2{
+    color:#a64a9b;
+    margin:18px 0;
+    font-size:28px;
+}
+
+p{
+    font-size:17px;
+    line-height:1.9;
+    margin:15px 0;
+}
+
+.name{
+    color:#d52b91;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
+.emoji{
+    font-size:65px;
+    margin:15px;
+}
+
+button{
+    background:linear-gradient(45deg,#ec55a8,#9660e8);
+    color:white;
+    padding:13px 25px;
+    border:0;
+    border-radius:30px;
+    font-size:16px;
+    margin:9px;
+    cursor:pointer;
+    box-shadow:0 5px 15px #a54d9b55;
+}
+
+button:hover{
+    transform:scale(1.06);
+}
+
+.page-number{
+    margin-top:20px;
+    font-size:13px;
+    color:#a64a9b;
+}
+
+.highlight{
+    color:#d33b91;
+    font-weight:bold;
+}
+
+.balloon{
+    position:fixed;
+    bottom:-100px;
+    font-size:45px;
+    animation:float 12s linear infinite;
+    pointer-events:none;
+    z-index:1;
+}
+
+@keyframes float{
+    to{transform:translateY(-120vh) rotate(25deg)}
+}
+
+.confetti{
+    position:fixed;
+    top:-40px;
+    font-size:25px;
+    animation:fall 7s linear forwards;
+    pointer-events:none;
+    z-index:3;
+}
+
+@keyframes fall{
+    to{transform:translateY(110vh) rotate(500deg)}
+}
+
+.cake{
+    font-size:110px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    50%{transform:translateY(-12px)}
+}
+
+.glow{
+    text-shadow:0 0 15px #e98bc4;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1: WELCOME -->
+
+<section class="page active" id="page1">
+<div class="card">
+    <div class="emoji">🎈🎀🎈</div>
+
+    <h1 class="glow">Happy Birthday</h1>
+
+    <h1 class="name">BISMA</h1>
+
+    <h2>Special Day 🌸</h2>
+
+    <p>
+        Aaj ka din bohat khaas hai
+        kyun ke aaj ek bohat achi aur
+        respectable personality ka birthday hai
+    </p>
+
+    <p>
+        Ye choti si website aap ke liye
+        meri taraf se ek special birthday surprise hai
+    </p>
+
+    <div class="emoji">🎂💗✨</div>
+
+    <button onclick="nextPage(2)">Open Your Surprise 🎁</button>
+
+    <div class="page-number">1 / 6</div>
+</div>
+</section>
+
+
+<!-- PAGE 2: WISHES -->
+
+<section class="page" id="page2">
+<div class="card">
+
+    <div class="emoji">💐</div>
+
+    <h2>Birthday Wishes For Bisma</h2>
+
+    <p>
+        Bisma aap ko birthday ki bohat bohat mubarak ho
+    </p>
+
+    <p>
+        Meri dua hai ke aap ki zindagi ka har din
+        khushiyon se bhara ho
+        aap ke chehre par hamesha muskurahat rahe
+        aur aap ko zindagi mein har woh khushi mile
+        jis ki aap tamanna karti hain
+    </p>
+
+    <p>
+        Aaj ka din aap ke liye bohat saari
+        khushiyan aur khoobsurat yaadein lekar aaye
+    </p>
+
+    <div class="emoji">🌷🎁💖</div>
+
+    <button onclick="nextPage(1)">Previous</button>
+    <button onclick="nextPage(3)">Next Page ➜</button>
+
+    <div class="page-number">2 / 6</div>
+</div>
+</section>
+
+
+<!-- PAGE 3: DUAS -->
+
+<section class="page" id="page3">
+<div class="card">
+
+    <div class="emoji">🤲🌙</div>
+
+    <h2>Special Duas For You</h2>
+
+    <p>
+        Allah Pak aap ko hamesha sehat
+        aur khushiyon wali zindagi ata farmaye
+    </p>
+
+    <p>
+        Aap ke naseeb achay kare
+        aap ki har jaiz dua qabool farmaye
+        aur zindagi ki har mushkil ko asaan farmaye
+    </p>
+
+    <p>
+        Allah aap ko har buri nazar se mehfooz rakhe
+        aap ke ghar walon ko salamat rakhe
+        aur aap ke ghar mein hamesha barkat aur rehmat rahe
+    </p>
+
+    <p>
+        Allah aap ko duniya aur aakhirat
+        dono mein kamyabi ata farmaye
+    </p>
+
+    <h2>Ameen Sum Ameen 🤍</h2>
+
+    <div class="emoji">🕋✨</div>
+
+    <button onclick="nextPage(2)">Previous</button>
+    <button onclick="nextPage(4)">Next Page ➜</button>
+
+    <div class="page-number">3 / 6</div>
+</div>
+</section>
+
+
+<!-- PAGE 4: BEAUTIFUL WORDS -->
+
+<section class="page" id="page4">
+<div class="card">
+
+    <div class="emoji">🌹</div>
+
+    <h2>Some Beautiful Words</h2>
+
+    <p>
+        Bisma aap waqai ek achi personality ki malik hain
+        aap ka baat karne ka andaaz
+        aur doosron ko izzat dena
+        bohat achi baat hai
+    </p>
+
+    <p>
+        Zindagi mein kuch log apne achay ikhlaq
+        aur apni achi soch ki wajah se
+        ek alag pehchan rakhte hain
+    </p>
+
+    <p>
+        Meri dua hai ke aap ki ye khoobsurat
+        aadatein hamesha aap ke saath rahein
+        aur aap ko har jagah izzat mile
+    </p>
+
+    <div class="emoji">🌸🦋💗</div>
+
+    <button onclick="nextPage(3)">Previous</button>
+    <button onclick="nextPage(5)">Next Page ➜</button>
+
+    <div class="page-number">4 / 6</div>
+</div>
+</section>
+
+
+<!-- PAGE 5: SUCCESS -->
+
+<section class="page" id="page5">
+<div class="card">
+
+    <div class="emoji">🌟</div>
+
+    <h2>Your Success & Future</h2>
+
+    <p>
+        Bisma meri dua hai ke aap zindagi mein
+        bohat aage barhein aur har maidan mein kamyabi hasil karein
+    </p>
+
+    <p>
+        Aap ke jitne bhi khwab hain
+        Allah Pak un sab ko khoobsurati se poora farmaye
+    </p>
+
+    <p>
+        Aap ki mehnat rang laaye
+        aap ko har qadam par kamyabi mile
+        aur aap apne ghar walon ka fakhar banein
+    </p>
+
+    <p class="highlight">
+        May your future be full of success and happiness ✨
+    </p>
+
+    <div class="emoji">🏆🌈💝</div>
+
+    <button onclick="nextPage(4)">Previous</button>
+    <button onclick="nextPage(6)">Final Surprise 🎁</button>
+
+    <div class="page-number">5 / 6</div>
+</div>
+</section>
+
+
+<!-- PAGE 6: FINAL BIRTHDAY -->
+
+<section class="page" id="page6">
+<div class="card">
+
+    <div class="emoji">🎊🎉🎊</div>
+
+    <h1>Happy Birthday</h1>
+
+    <h1 class="name">BISMA ❤️</h1>
+
+    <div class="cake">🎂</div>
+
+    <h2>Make A Wish! ✨</h2>
+
+    <p>
+        Allah kare aap ki zindagi ka
+        aane wala har saal pehle se zyada
+        khoobsurat aur khushiyon bhara ho
+    </p>
+
+    <p>
+        Hamesha khush rahein
+        muskurati rahein
+        aur apni zindagi mein bohat kamyab rahein
+    </p>
+
+    <h2>Stay Blessed 🌸</h2>
+
+    <p class="highlight">
+        Lots of Respect & Best Wishes 🤍
+    </p>
+
+    <div class="emoji">🎀💗🌷</div>
+
+    <button onclick="celebrate()">Celebrate Again 🎉</button>
+
+    <button onclick="nextPage(1)">Start Again ↻</button>
+
+    <div class="page-number">6 / 6</div>
+</div>
+</section>
+
+
+<script>
+
+let currentPage = 1;
+
+function nextPage(number){
+
+    document.getElementById("page"+currentPage)
+    .classList.remove("active");
+
+    currentPage = number;
+
+    document.getElementById("page"+currentPage)
+    .classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+
+// Falling confetti
+
+function createConfetti(){
+
+    const items = ["🎊","✨","💖","🌸","🎉","⭐","💕"];
+
+    const element = document.createElement("div");
+
+    element.className = "confetti";
+
+    element.innerHTML =
+    items[Math.floor(Math.random()*items.length)];
+
+    element.style.left = Math.random()*100+"vw";
+
+    element.style.animationDuration =
+    (4+Math.random()*5)+"s";
+
+    document.body.appendChild(element);
+
+    setTimeout(()=>{
+        element.remove();
+    },9000);
+}
+
+setInterval(createConfetti,500);
+
+
+// Floating balloons
+
+function createBalloon(){
+
+    const element = document.createElement("div");
+
+    element.className = "balloon";
+
+    element.innerHTML =
+    ["🎈","🎈","🎀","💗"][Math.floor(Math.random()*4)];
+
+    element.style.left = Math.random()*95+"vw";
+
+    element.style.animationDuration =
+    (9+Math.random()*8)+"s";
+
+    document.body.appendChild(element);
+
+    setTimeout(()=>{
+        element.remove();
+    },18000);
+}
+
+setInterval(createBalloon,1700);
+
+
+// Special celebration
+
+function celebrate(){
+
+    for(let i=0;i<40;i++){
+
+        setTimeout(createConfetti,i*100);
+
+    }
+
+    alert("Happy Birthday Bisma! 🎂💗");
+}
+
+</script>
+
+</body>
+</html>
